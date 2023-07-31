@@ -1,0 +1,11 @@
+This code appears to be a JavaScript function named firstPageAnim() that uses the GSAP (GreenSock Animation Platform) library to create animations on a web page. Let's break down what each part of the code does:
+
+var tl = gsap.timeline();: This line creates a new timeline using the GSAP library. A timeline is essentially a container that holds various animations that can be sequenced and controlled together. In this case, the variable tl is used to reference the timeline.
+
+tl.from("#nav", { y: '-10', opacity: 0, duration: 1.3, ease: Expo.easeInOut }): This line defines the first animation in the timeline. It animates the element with the ID "nav". The animation moves the element 10 pixels up (in the y-direction) and sets its initial opacity to 0. The animation lasts for 1.3 seconds and uses the Expo ease-in-out easing function, which creates a smooth acceleration and deceleration effect.
+
+.to(".boundingelem", { y: 0, ease: Expo.easeInOut, duration: 2, stagger: .2, delay: -1.2 }): This line defines the second animation in the timeline. It selects all elements with the class "boundingelem" and animates them. The animation moves the elements back to their original position (y: 0) using the Expo ease-in-out easing function. The animation lasts for 2 seconds. The stagger property adds a delay between each element animation (0.2 seconds in this case), creating a staggered effect. The delay property of -1.2 is used to offset the start of this animation relative to the end of the previous animation in the timeline, making the "boundingelem" animation start 1.2 seconds before the end of the first animation.
+
+The function ends here.
+
+Overall, when the firstPageAnim() function is called, the GSAP timeline tl will play the animations defined in the function. First, it will animate the element with the ID "nav" by moving it up and fading it in. After that, it will animate all elements with the class "boundingelem" to move them back to their original position with a staggered effect. The duration, easing, and stagger values can be adjusted to customize the animation timing and behavior according to the specific needs of the web page.
